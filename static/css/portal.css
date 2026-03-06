@@ -1,0 +1,242 @@
+/* =========================================
+   Resident Portal — portal.css
+   ========================================= */
+
+.portal-body {
+  min-height: 100vh;
+  background: var(--gray-100);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   Portal Nav
+   ========================================= */
+.portal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+}
+
+.portal-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.portal-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.portal-user-email {
+  font-size: 0.82rem;
+  color: var(--gray-300);
+  letter-spacing: 0.02em;
+}
+
+.btn-signout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.btn-signout:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-signout svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* =========================================
+   Portal Main
+   ========================================= */
+.portal-main {
+  flex: 1;
+  margin-top: var(--nav-height);
+  padding: 48px 24px 64px;
+  max-width: var(--max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   Welcome Banner
+   ========================================= */
+.portal-welcome {
+  margin-bottom: 40px;
+}
+
+.portal-welcome .section-label {
+  margin-bottom: 8px;
+}
+
+.portal-welcome-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: normal;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.portal-welcome-sub {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+}
+
+/* =========================================
+   Feature Cards
+   ========================================= */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portal-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.portal-card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.portal-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.portal-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.portal-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: normal;
+  color: var(--navy);
+}
+
+.portal-card p {
+  font-size: 0.88rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.portal-card-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--cream);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  align-self: flex-start;
+}
+
+/* =========================================
+   Loading / Auth guard overlay
+   ========================================= */
+.portal-loading {
+  position: fixed;
+  inset: 0;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.portal-loading[hidden] {
+  display: none;
+}
+
+.portal-loading-inner {
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+}
+
+.portal-loading-inner::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--gray-300);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 900px) {
+  .portal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-user-email {
+    display: none;
+  }
+}

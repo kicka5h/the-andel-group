@@ -1,0 +1,328 @@
+/* =========================================
+   Newsletter Page — newsletter.css
+   ========================================= */
+
+/* --- Hero --- */
+.newsletter-hero {
+  background: var(--navy);
+  padding: 80px 0 72px;
+  text-align: center;
+}
+
+.newsletter-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: normal;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.newsletter-hero .hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.78);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* --- Layout --- */
+.newsletter-main {
+  padding: 72px 0 100px;
+  background: var(--cream);
+}
+
+.newsletter-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* --- Sign-Up Card --- */
+.signup-card {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.signup-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.signup-intro {
+  font-size: 0.92rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.required-mark {
+  color: #c0392b;
+}
+
+/* --- Interests Fieldset --- */
+.interests-fieldset {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.interests-fieldset legend {
+  padding: 0 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+/* --- Checkboxes --- */
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--navy);
+  cursor: pointer;
+}
+
+.checkbox-label a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent-label {
+  padding: 16px;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-300);
+  font-size: 0.85rem;
+}
+
+/* --- Sidebar --- */
+.newsletter-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 28px 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+/* --- Preview List --- */
+.preview-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.preview-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
+.preview-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.preview-list strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.preview-list p {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* --- Past Issues --- */
+.past-issues-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.past-issues-list li {
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.past-issues-list li:last-child {
+  border-bottom: none;
+}
+
+.past-issues-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 0;
+  transition: opacity 0.2s;
+}
+
+.past-issues-list a:hover {
+  opacity: 0.7;
+}
+
+.issue-date {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.issue-title {
+  font-size: 0.87rem;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* --- Testimonial --- */
+.testimonial-card {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.testimonial-card blockquote p {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.testimonial-card blockquote footer {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* --- Form Status --- */
+.form-status {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
+.form-status--success {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.form-status--error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+.form-status--info {
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  color: #1e40af;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1000px) {
+  .newsletter-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .signup-card {
+    padding: 28px 20px;
+  }
+
+  .form-row,
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
